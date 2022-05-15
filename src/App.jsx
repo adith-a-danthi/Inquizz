@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router';
-import { Home, Page404 } from './views';
+import { Home, Page404, QuizzesPage } from './views';
 import './styles/index.css';
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/quizzes" element={<QuizzesPage />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </div>

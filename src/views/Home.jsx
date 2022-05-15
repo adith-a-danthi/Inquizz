@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Navbar } from '../components';
-import CategoryCard from '../components/CategoryCard/CategoryCard';
+import { Navbar, CategoryCard } from '../components';
 import { useData } from '../contexts/data-context';
 
 export default function Home() {
