@@ -1,7 +1,13 @@
+import { Routes, Route } from 'react-router';
+import { Home } from './views';
+import './styles/index.css';
+
 function App() {
   return (
     <div className="App">
-      <h1>Inquizz</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
