@@ -1,23 +1,10 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Navbar } from '../components';
 import CategoryCard from '../components/CategoryCard/CategoryCard';
+import { useData } from '../contexts/data-context';
 
 export default function Home() {
-  const [categories, setCategories] = useState([]);
-
-  const getCategories = async () => {
-    try {
-      const response = await axios.get('/api/categories');
-      setCategories(response.data.categories);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    getCategories();
-  }, []);
+  const { categories } = useData();
 
   return (
     <div>
@@ -29,7 +16,9 @@ export default function Home() {
           <p className="text-md">You're just a click away from the best quizzes on the internet.</p>
           <p className="text-md">Alright, maybe two, but you get the point.</p>
 
-          <button className="btn btn-gray mt-4">View All Quizzes</button>
+          <Link to="/quizzes">
+            <button className="btn btn-gray mt-4">View All Quizzes</button>
+          </Link>
         </section>
 
         <hr />
@@ -38,7 +27,9 @@ export default function Home() {
           <h3 className="heading-3 text-center">Categories</h3>
           <div className="flex gap-1 flex-wrap justify-center py-4">
             {categories.map((category) => (
-              <CategoryCard category={category} key={category.id} />
+              <Link to={`/quizzes?category=${category.categoryName}`} key={category.id}>
+                <CategoryCard category={category} />
+              </Link>
             ))}
           </div>
         </section>
