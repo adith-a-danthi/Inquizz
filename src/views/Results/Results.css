@@ -1,0 +1,24 @@
+.option-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: var(--color-white);
+  outline: 1px solid var(--color-gray);
+}
+
+.option-item.selected {
+  background-color: var(--color-gray);
+  color: var(--color-white);
+}
+
+/* Icon Colors */
+.answer {
+  color: rgb(25, 189, 25);
+}
+
+.incorrect {
+  color: rgb(250, 73, 73);
+}
