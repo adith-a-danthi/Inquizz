@@ -28,11 +28,13 @@ export const quizzes = [
         _id: uuid(),
         question: 'Who is not a member of the Straw Hat Pirates?',
         options: ['Nami', 'Usopp', 'Sabo', 'Chopper'],
+        answer: 'Sabo',
       },
       {
         _id: uuid(),
         question: 'Which devil fruit did Luffy eat to gain his power?',
         options: ['Gomu gomu no mi', 'Gura gura no mi', 'Bari bari no mi', 'Kuro kuro no mi'],
+        answer: 'Gomu gomu no mi',
       },
       {
         _id: uuid(),
@@ -52,7 +54,7 @@ export const quizzes = [
     questions: [
       {
         _id: uuid(),
-        question: 'Which of these is not a member of the Uchiha clan?',
+        question: 'Who among these is not a member of the Uchiha clan?',
         options: ['Sasuke', 'Kakashi', 'Shisui', 'Itachi'],
         answer: 'Kakashi',
       },
@@ -78,7 +80,7 @@ export const quizzes = [
         _id: uuid(),
         question: 'Which Legendary Sanin taught Naruto rasengan?',
         options: ['Jiraiya', 'Tsunade', 'Orochimaru', 'Danzo'],
-        answer: 'Jiraya',
+        answer: 'Jiraiya',
       },
     ],
   },
@@ -149,6 +151,7 @@ export const quizzes = [
         _id: uuid(),
         question: 'What phrase does Robin constantly say on her pre-morning news show?',
         options: ['Like, so', 'Yeah Yeah', 'But...Umm', 'Uh..so'],
+        answer: 'But...Umm',
       },
       {
         _id: uuid(),
