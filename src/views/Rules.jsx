@@ -1,6 +1,10 @@
+import { Link } from 'react-router-dom';
 import { Navbar } from '../components';
+import { useQuiz } from '../contexts/quiz-context';
 
 export default function Rules() {
+  const { quizState } = useQuiz();
+
   return (
     <div>
       <Navbar />
@@ -14,7 +18,9 @@ export default function Rules() {
             <li>An incorrect answer fetches you -5 points.</li>
           </ul>
           <div className="ma-4 mt-8 text-center">
-            <button className="btn btn-gray">Start Quiz</button>
+            <Link to={`/quiz/${quizState.currentQuiz._id}`}>
+              <button className="btn btn-gray">Start Quiz</button>
+            </Link>
           </div>
         </section>
       </main>
