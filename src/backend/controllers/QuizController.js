@@ -6,7 +6,12 @@ import { Response } from 'miragejs';
  * */
 const getAllQuizzesHandler = function () {
   try {
-    return new Response(200, {}, { quizzes: this.db.quizzes });
+    const quizzes = this.db.quizzes.map((quiz) => {
+      // eslint-disable-next-line no-unused-vars
+      const { questions, ...rest } = quiz;
+      return { ...rest };
+    });
+    return new Response(200, {}, { quizzes });
   } catch (error) {
     return new Response(500, {}, { error });
   }
