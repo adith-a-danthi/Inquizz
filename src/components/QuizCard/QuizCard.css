@@ -18,3 +18,10 @@
   object-fit: cover;
   flex-grow: 1;
 }
+
+@media screen and (max-width: 768px) {
+  .quiz-card {
+    max-width: 85%;
+    margin: auto;
+  }
+}
